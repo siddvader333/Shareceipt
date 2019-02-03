@@ -9,6 +9,9 @@ import arrow
 from flask_socketio import SocketIO
 import sys
 import json
+from people import friend
+from item import item
+import requests
 
 
 load_dotenv()
@@ -146,7 +149,36 @@ def receiptDistribution():
 	data = data['pTableData']
 	with open('dist/jsontext.txt', 'w') as f:
 		f.write(data)
-	return 'splitting.html'
+    
+    
+    #################
+    
+    data = eval((data['pTableData'])[1:-1])
+    for i in range(0,len(data)):
+        friends = friends.append( friend(data[i]['FirstName'],data[i]['LastName'],data[i]['Email']) )
+    
+    dish = item('Big Pulled Pork', 9.49,13,12)
+
+    dish.add_friend(friends)
+    dish.assign_prices()
+
+    url = "https://mchacks6.appspot.com/v1/request-money"
+
+    headers = {
+    'Content-Type': "application/json",
+    'cache-control': "no-cache",
+    'Postman-Token': "d09e9d2c-cd69-429d-81b0-6669b3f7402e"
+    }
+
+    response_list = list(map(lambda x:requests.request("POST", url, data=x.interac_request(), headers=headers),friends))
+    list(map(lambda x:print(x.text), response_list))
+
+
+    
+
+	return 'homepage.html'
+
+    ##########################
 
 
 
