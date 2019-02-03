@@ -17,18 +17,19 @@ $(document).ready(function(){
     success: function (data){
 	console.log(data);
 
-	data = JSON.parse(data)
+    data = JSON.parse(data)
+    var tr="<tr>";
+    $("#myTable").append(tr); 
     for(var i=0;i<data.length;i++)
     {
 		console.log(data[i]);
-        var tr="<tr>";
-        var td1="<td>"+data[i]["FirstName"]+"</td>";
-        var td2="<td>"+data[i]["LastName"]+"</td>";
-        var td3="<td>"+data[i]["Email"]+"</td></tr>";
-
-       $("#myTable").append(tr+td1+td2+td3); 
+        
+        var td1="<td><input type='button' value=data[i][FirstName] class='splitting' onclick='changeColor(this)'></td>";
+       $("#myTable").append(td1); 
 
     }   
+    var trEnd = "</tr>";
+    $("#myTable").append(trEnd); 
 
     }
   });
