@@ -6,6 +6,16 @@
 .body{
     text-align:center;
 }
+
+.friendTable{
+    float: left;
+}
+.inputText{
+    padding:8px 24px;
+    border-radius: 15px;
+    border:1px solid #cccccc
+
+}
 .submit-buttons{
     background-color:#3d348B;
     color:white;
@@ -16,28 +26,61 @@
     margin:10px;
 
 }
+.addfriendsbutton{
+    background-color:#3d348B;
+    color:white;
+    padding: 10px 26px;
+    border-radius:80px;
+    font-size: 16px;
+    border:none;
+    margin:10px;
+
+}
 
 .container{
     margin: 0 auto
 }
-
-.circle{
-  display: inline-block;
-    background-color:#D3D3D3;
+.circle-one{
+    display: inline-block;
+    background-color:#7785AC;
     height:30px;
     width:30px;
     border-radius:50%;
-}
-.circle p{
-    margin: 0 auto;
+    line-height:2;
+    text-align:center;
     color:white;
 }
-table{
-    margin: 0 auto;
-    padding:30px;
-    padding-top:60px;
-}
-th{
-    text-align:center;
-    vertical-align:center;
+.circle{
+    display: inline-block;
+      background-color:#D3D3D3;
+      height:30px;
+      width:30px;
+      border-radius:50%;
+      line-height:2;
+      text-align:center;
+      color:#EDEDED;
+  }
+  .circle p{
+      margin: 0 auto;
+      color:white;
+  }
+  table{
+      margin: 0 auto;
+      padding:30px;
+      padding-top:60px;
+      margin-top:40px
+  }
+  th{
+      text-align:center;
+      vertical-align:center;
+  }
+  #name{
+      width:150px;
+  }
+  #last{
+      width:150px;
+  }
+
+  td { 
+    padding: 10px;
 }
