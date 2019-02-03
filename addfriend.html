@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,7 +6,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="mchacks.css"/>
+    <link rel="stylesheet" type="text/css" href="addfriend.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
@@ -13,45 +14,53 @@
     </div>
     <div class="body">
         <div class="container">
-                <table style="width:60%">
-                        <tr>
-                            <th><span class="circle">1</span></th>
-                            <th><span class="circle">2</span></th>
-                            <th><span class="circle">3</span></th>
-                            <th><span class="circle">4</span></th>
-                            <th><span class="circle">5</span></th>
-                        </tr>
-                    </table>
-        <h1>Add Friends</h1>
-        <p>Add your friends names whom you shared your food with.</p>
+        <h1>Verify Receipt</h1>
         <div>
-        
-        <input class="firstName" placeholder="First Name"type="text"/>
-        <input class="lastName" placeholder="Last Name"type="text"/>
-        <input class="emailInput" placeholder="Email" type="text"/>
-        <button onclick="addRow()"> Add Friend</button>
-        </div>
-        <table id="list_of_people" style="width:600px">
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Email</th>
-            </tr>
-            <tr>
-                <td>Karen</td>
-                <td>Zhao</td>
-                <td>karen.12345678@hotmail.com</td>
-            </tr>
-            </table>
+        <input id="firstName" placeholder="First Name"type="text"/>
+        <input id="lastName" placeholder="Last Name"type="text"/>
+        <input id="emailInput" placeholder="Email" type="text"/>
 
-        <a href="splitting.html"><button class="submit-buttons">Next Step</button></a>
+        </div>
+
+<table id="myTable">
+  <tr>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Email</td>
+  </tr>
+  <tr>
+    <td>Karen</td>
+    <td>Zhao</td>
+    <td>karen.zhao@gmail.com</td>
+  </tr>
+</table>
+<br>
+
+<button onclick="myFunction()">Add Friend</button>
+
+<script>
+function myFunction() {
+
+var firstNameInput = document.getElementById("firstName"); //textbox to add first name
+var lastNameInput = document.getElementById("lastName");//textbox to add last name
+var emailInput = document.getElementById("emailInput");//textbox to add email
+
+  var table = document.getElementById("myTable");
+  var row = table.insertRow(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+
+  //set output text
+  cell1.innerHTML = firstNameInput.value;
+  cell2.innerHTML = lastNameInput.value;
+  cell3.innerHTML = emailInput.value;
+
+}
+</script>
+
+        <a href="nextpage.html"><button class="submit-buttons">Next Step</button></a>
     </div>
 </body>
-
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="mchacks_javascript.js"></script>
-
-</body>
-
+    
 </html>
