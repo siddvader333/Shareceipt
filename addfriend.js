@@ -1,35 +1,31 @@
-﻿const firstNameInput = document.querySelector('.firstName'); //textbox to add first name
-const lastNameInput = document.querySelector('.lastName');//textbox to add last name
-const emailInput = document.querySelector('.emailInput');//textbox to add email
+﻿
+function myFunction() {
 
-const errorMessage = document.querySelector('errorMessage.description');
-//button to add item
-const addPersonButton = document.querySelector('button.addPersonButton');//button to add item
-
-
-function addRow(){
-
-    //table for inserting the text
-    var table = document.getElementById(".list_of_people");
-
-    //create new row 
-    var row = table.insertRow(0);
-
-    //insert new cells
-    var firstNameCell = row.insertCell(0);
-    var lastNameCell = row.insertCell(1);
-    var emailCell = row.insertCell(2);
-    var deleteButton = row.insertCell(3);
-    
-
-        //add text to the cells IF all text boxes are filled
-        firstNameCell.innerHTML = "New Name";
-        lastNameCell.innerHTML = lastNameInput.value;
-        emailCell.innerHTML = emailInput.value;
-    
-
-};
-
+  var firstNameInput = document.getElementById("firstName"); //textbox to add first name
+  var lastNameInput = document.getElementById("lastName");//textbox to add last name
+  var emailInput = document.getElementById("emailInput");//textbox to add email
+  
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(1);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    var cell3 = row.insertCell(2);
+    //var cell4 = row.insertCell(3, GamepadButton);
+  
+    //cell4.style = "Button"
+  
+    //set output text
+    cell1.innerHTML = firstNameInput.value;
+    cell2.innerHTML = lastNameInput.value;
+    cell3.innerHTML = emailInput.value;
+    //cell4.innerHTML = "Delete";
+  
+    //clear input text boxes
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    emailInput.value = "";
+  
+  }
 //used for deleting buttons
 function deleteRow(r) {
   var i = r.parentNode.parentNode.rowIndex;

@@ -7,6 +7,9 @@
     text-align:center;
 }
 
+.friendTable{
+    float: left;
+}
 .inputText{
     padding:8px 24px;
     border-radius: 15px;
@@ -71,3 +74,13 @@
       text-align:center;
       vertical-align:center;
   }
+  #name{
+      width:150px;
+  }
+  #last{
+      width:150px;
+  }
+
+  td { 
+    padding: 10px;
+}
