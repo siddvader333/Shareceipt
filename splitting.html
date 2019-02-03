@@ -18,12 +18,13 @@
                             <th><span class="circle">1</span></th>
                             <th><span class="circle">2</span></th>
                             <th><span class="circle">3</span></th>
-                            <th><span class="circle">4</span></th>
+                            <th><span class="circle-one">4</span></th>
                             <th><span class="circle">5</span></th>
                         </tr>
                     </table>
+                    <br>
         <h1>Divide Cost</h1>
-      
+        <br>
         <div class="row">
                 <div class="col-lg-2">
                 </div>
@@ -43,23 +44,53 @@
                             </div>
                 </div>
                 <div class="col-lg-4" >
-                        <form autocomplete="off" action="/action_page.php">
-                            <div class="autocomplete" style="width:300px;">
-                              <input id="myInput" type="text" name="myCountry" placeholder="Friends">
+                        <form autocomplete="off" >
+                            <div class="autocomplete" >
+
+                                    <table  class="splittingTable" rules = "rows" style="width:60%">
+                                            <tr>
+                                              <th colspan="5" id="">Names</th>
+                                            </tr>
+
+                                            <tr> 
+                                                <th><button class = "splitting" onclick = "selectPerson(this)">Sidd</button></th>
+                                                <th><button class = "splitting" onclick = "selectPerson(this)">Karen</button></th>
+                                                <th><button class = "splitting" onclick = "selectPerson(this)">Ed</button></th>
+                                                <th><button class = "splitting" onclick = "selectPerson(this)">Zach</button></th>
+                                                <th><button class = "splitting" onclick = "selectPerson(this)">Alex</button></th>
+                                            </tr>
+
+                                            <tr> 
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Sidd</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Karen</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Ed</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Zach</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Alex</button></th>
+                                             </tr>
+
+                                            <tr>  
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Sidd</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Karen</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Ed</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Zach</button></th>
+                                                    <th><button class = "splitting" onclick = "selectPerson(this)">Alex</button></th>
+                                             </tr>
+
+                                          </table>
                             </div>
                           </form>
                 </div>
                 <div class="col-lg-2">
                 </div> 
             </div>
-
+            <br>
         <a href="receiptverify.html"><button class="submit-buttons">Next Step</button></a>
     </div>
 </body>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-    <script src="mchacks_javascript.js"></script>
+    <script src="splitting.js"></script>
 
 </body>
 
