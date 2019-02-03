@@ -14,10 +14,11 @@
 #title{
     position: absolute;
     z-index:2;
-  top: 15%;
+  top: 11%;
   left: 50%;
-  transform: translate(-50%, -15%);
+  transform: translate(-50%, -11%);
   color:black;
+  font-size:100px
 
 }
 #container{
@@ -36,19 +37,32 @@
     margin:10px;
     position: absolute;
     z-index:2;
-    top: 75%;
+    top: 78%;
     left: 50%;
-    transform: translate(-50%, -75%);
+    transform: translate(-50%, -78%);
 
 }
 #mini-logos{
     position: absolute;
     z-index:2;
-    top: 55%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -60%);
 
 }
 #mini-logos img{
-    height:300px
+    height:150px;
+    margin:0 auto;
+    padding:30px;
+    padding-bottom:0px
+}
+#mini-logos h4{
+    font-size:16px;
+    color:black
+}
+#mini-logos h5{
+    color:black;
+}
+.first:hover{
+    transform: scale(1.1)
 }

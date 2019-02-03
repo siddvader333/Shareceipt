@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="splitting.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
 </head>
 <body>
    <div id="header">
@@ -45,9 +47,38 @@
                 </div>
                 <div class="col-lg-4" >
                         <form autocomplete="off" >
-                            <div class="autocomplete" >
+                            <div class="autocomplete" name="tableone">
+ 
+<script>
+$(window).onload=function(){
+var transform = {"tag":"table", "children":[
+    {"tag":"tbody","children":[
+        {"tag":"tr","children":[
+            {"tag":"td","html":"${FirstName}"},
+            {"tag":"td","html":"${LastName}"},
+            {"tag":"td","html":"${Email}"}			
+        ]}
+    ]}
+]};
 
-                                    <table  class="splittingTable" rules = "rows" style="width:60%">
+var data = [{"FirstName":"dsaf","LastName":"sdfa","Email":"sfdsq "}]
+
+$('#myTable > tbody ').json2html(data, transform);
+};
+</script>
+
+
+<table id="myTable" rules = "rows" style="width:60%">
+	<thead>
+	<tr>
+ 		<th  id="name" name="fname">First Name</th>
+		<th id="last"  name="lname">Last Name</th>
+		<th id="email" name="email">Email</th>
+	</tr>
+	</thead>
+	<tbody></tbody>
+</table>
+                                    <!--<table  class="splittingTable" rules = "rows" style="width:60%">
                                             <tr>
                                               <th colspan="5" id="">Names</th>
                                             </tr>
@@ -76,7 +107,7 @@
                                                     <th><button class = "splitting" onclick = "selectPerson(this)">Alex</button></th>
                                              </tr>
 
-                                          </table>
+                                          </table> -->
                             </div>
                           </form>
                 </div>
@@ -89,7 +120,8 @@
 </body>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+
     <script src="splitting.js"></script>
 
 </body>
