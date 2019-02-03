@@ -9,8 +9,36 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js"></script>
+<script>
+$(document).ready(function(){
+	console.log("in fcn");
+  $.ajax({
+    url:'jsontext.txt',
+    success: function (data){
+	console.log(data);
+
+	data = JSON.parse(data)
+    for(var i=0;i<data.length;i++)
+    {
+		console.log(data[i]);
+        var tr="<tr>";
+        var td1="<td>"+data[i]["FirstName"]+"</td>";
+        var td2="<td>"+data[i]["LastName"]+"</td>";
+        var td3="<td>"+data[i]["Email"]+"</td></tr>";
+
+       $("#myTable").append(tr+td1+td2+td3); 
+
+    }   
+
+    }
+  });
+});
+</script> 
 </head>
 <body>
+<script>
+
+</script>
    <div id="header">
     </div>
     <div class="body">
@@ -48,9 +76,10 @@
                 <div class="col-lg-4" >
                         <form autocomplete="off" >
                             <div class="autocomplete" name="tableone">
- 
-<script>
-$(window).onload=function(){
+<script src="https://cdnjs.cloudflare.com/ajax/libs/json2html/1.2.0/json2html.min.js">
+$(document).ready(function(){
+var data;
+
 var transform = {"tag":"table", "children":[
     {"tag":"tbody","children":[
         {"tag":"tr","children":[
@@ -61,12 +90,10 @@ var transform = {"tag":"table", "children":[
     ]}
 ]};
 
-var data = [{"FirstName":"dsaf","LastName":"sdfa","Email":"sfdsq "}]
-
+var data = "d";
 $('#myTable > tbody ').json2html(data, transform);
-};
+});
 </script>
-
 
 <table id="myTable" rules = "rows" style="width:60%">
 	<thead>
@@ -117,6 +144,16 @@ $('#myTable > tbody ').json2html(data, transform);
             <br>
         <a href="receiptverify.html"><button class="submit-buttons">Next Step</button></a>
     </div>
+	
+	  <script>
+    // tell the embed parent frame the height of the content
+    if (window.parent && window.parent.parent){
+      window.parent.parent.postMessage(["resultsFrame", {
+        height: document.body.getBoundingClientRect().height,
+        slug: "7u8v9wdq"
+      }], "*")
+    }
+  </script>
 </body>
 
 
