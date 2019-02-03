@@ -28,3 +28,8 @@ class friend:
         self.message = prefix + self.message
         self.message = self.message[:-2] + "."
         return [self.f_name, self.l_name, self.contact, self.price, self.message]
+
+    def interac_request(self):
+        self.out()
+        r_val = "{\n\t\"amount\": %.2f,\n\t\"contactName\": \"%s\",\n\t\"email\": \"%s\",\n\t\"requesterMessage\": \"%s\"\n}" %(self.price, self.f_name + ' ' + self.l_name, self.contact, self.message)
+        return r_val
