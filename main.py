@@ -153,29 +153,28 @@ def receiptDistribution():
     
     #################
     
-    data = eval((data['pTableData'])[1:-1])
-    for i in range(0,len(data)):
-        friends = friends.append( friend(data[i]['FirstName'],data[i]['LastName'],data[i]['Email']) )
+	data = eval(data[1:-1])
+	print(data)
+	friends = list()
+	for i in range(0,len(data)):
+		friends.append( friend(data[i]['FirstName'],data[i]['LastName'],data[i]['Email']) )
     
-    dish = item('Big Pulled Pork', 9.49,13,12)
-
-    dish.add_friend(friends)
-    dish.assign_prices()
-
-    url = "https://mchacks6.appspot.com/v1/request-money"
-
-    headers = {
+	dish1 = item('1 Edamame', 9.00,13,12)
+	dish2 = item('1 Kimo', 10.50,13,12)
+	dish3 = item('1 A la Carte Sushi', 243.00,13,12)
+	dish.add_friend(friends)
+	dish.assign_prices()
+	url = "https://mchacks6.appspot.com/v1/request-money"
+	
+	headers = {
     'Content-Type': "application/json",
     'cache-control': "no-cache",
     'Postman-Token': "d09e9d2c-cd69-429d-81b0-6669b3f7402e"
     }
-
-    response_list = list(map(lambda x:requests.request("POST", url, data=x.interac_request(), headers=headers),friends))
-    list(map(lambda x:print(x.text), response_list))
-
-
-    
-
+	
+	response_list = list(map(lambda x:requests.request("POST", url, data=x.interac_request(), headers=headers),friends))
+	list(map(lambda x:print(x.text), response_list))
+	
 	return 'homepage.html'
 
     ##########################
