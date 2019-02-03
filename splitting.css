@@ -25,6 +25,17 @@
       text-align:center;
       color:#EDEDED;
   }
+
+  .circle-one{
+    display: inline-block;
+    background-color:#7785AC;
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    line-height:2;
+    text-align:center;
+    color:white;
+}
   .circle p{
       margin: 0 auto;
       color:white;
@@ -49,4 +60,33 @@
 }
 #item{
     width:400px
+}
+
+.splitting{
+    background-color:white;
+    color:black;
+    padding: 3px 10px;
+    border-radius:80px;
+    font-size: 12px;
+    border:1px solid grey;
+    margin:10px;
+}
+
+.splitting2{
+    background-color:red;
+    color:black;
+    padding: 3px 10px;
+    border-radius:80px;
+    font-size: 12px;
+    border:1px solid grey;
+    margin:10px;
+}
+.splitting:hover{
+    background-color:#C9CEBD;
+    color:black;
+}
+
+.splittingTable{
+    padding-left: 50px;
+    padding-top: 100px;
 }
