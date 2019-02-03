@@ -9,7 +9,7 @@
     /* position in top left of #tobecovered */
     top: 0; /* top of #tobecovered */
     left: 0; /* left of #tobecovered */
-    height:50px
+    height:45px
 }
 #title{
     position: absolute;

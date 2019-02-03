@@ -84,3 +84,10 @@
   td { 
     padding: 10px;
 }
+
+
+.delete{
+    background-color:#ffffff;
+    border: 1px solid #ffffff;
+    font-weight: bold;
+}
