@@ -37,3 +37,31 @@ function deleteRow(r){
 {
  document.getElementById("row"+no+"").outerHTML="";
 }*/
+
+function submitForm(){
+	console.log("SUBMITTING THIS BITCH");
+var TableData = new Array();
+    
+$('#myTable tr').each(function(row, tr){
+	console.log("YEET");
+    TableData[row]={
+        "FirstName" : $(tr).find('td:eq(0)').text()
+        , "LastName" :$(tr).find('td:eq(1)').text()
+        , "Email" : $(tr).find('td:eq(2)').text()
+    }
+}); 
+	TableData.shift();  // first row is the table header - so remove
+	console.log(TableData);
+	TableData = JSON.stringify(TableData);
+	
+	 $.ajax({
+    type: "POST",
+    url: "/receiptDistribution",
+    data: "pTableData=" + TableData,
+    success: function(msg){
+		window.location.href = msg;
+
+    }
+});
+	
+}
