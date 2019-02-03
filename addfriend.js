@@ -24,7 +24,7 @@ function myFunction() {
     firstNameInput.value = "";
     lastNameInput.value = "";
     emailInput.value = "";
-  
+
 
 
   }  
