@@ -162,8 +162,12 @@ def receiptDistribution():
 	dish1 = item('1 Edamame', 9.00,13,12)
 	dish2 = item('1 Kimo', 10.50,13,12)
 	dish3 = item('1 A la Carte Sushi', 243.00,13,12)
-	dish.add_friend(friends)
-	dish.assign_prices()
+	dish1.add_friend(friends)
+	dish1.assign_prices()
+	dish2.add_friend(friends)
+	dish2.assign_prices()
+	dish3.add_friend(friends)
+	dish3.assign_prices()
 	url = "https://mchacks6.appspot.com/v1/request-money"
 	
 	headers = {
