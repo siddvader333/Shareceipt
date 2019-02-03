@@ -42,6 +42,16 @@
     text-align:center;
     color:#EDEDED;
 }
+.circle-one{
+    display: inline-block;
+    background-color:#7785AC;
+    height:30px;
+    width:30px;
+    border-radius:50%;
+    line-height:2;
+    text-align:center;
+    color:white;
+}
 .circle p{
     margin: 0 auto;
     color:white;

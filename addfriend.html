@@ -17,8 +17,8 @@
             <table style="width:60%">
                 <tr>
                     <th><span class="circle">1</span></th>
-                    <th><span class="circle-one">2</span></th>
-                    <th><span class="circle">3</span></th>
+                    <th><span class="circle">2</span></th>
+                    <th><span class="circle-one">3</span></th>
                     <th><span class="circle">4</span></th>
                     <th><span class="circle">5</span></th>
                 </tr>
@@ -26,10 +26,10 @@
         <h1>Add Friend</h1>
         <p>Add your friends to the list and let us split the bill!</p>
         <div>
-        <input id="firstName" placeholder="First Name"type="text"/>
-        <input id="lastName" placeholder="Last Name"type="text"/>
-        <input id="emailInput" placeholder="Email" type="text"/>
-        <button onclick="myFunction()">Add Friend</button>
+        <input id="firstName" placeholder="First Name" class = "inputText" type="text"/>
+        <input id="lastName" placeholder="Last Name"type="text" class = "inputText"/>
+        <input id="emailInput" placeholder="Email" type="text" class = "inputText"/>
+        <button onclick="myFunction()" class = "addfriendsbutton">Add Friend</button>
         </div>
 
 <table id="myTable" style="width:60%">
@@ -62,6 +62,11 @@ var emailInput = document.getElementById("emailInput");//textbox to add email
   cell2.innerHTML = lastNameInput.value;
   cell3.innerHTML = emailInput.value;
   //cell4.innerHTML = "Delete";
+
+  //clear input text boxes
+  firstNameInput.value = "";
+  lastNameInput.value = "";
+  emailInput.value = "";
 
 }
 </script>

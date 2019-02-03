@@ -6,10 +6,27 @@
 .body{
     text-align:center;
 }
+
+.inputText{
+    padding:8px 24px;
+    border-radius: 15px;
+    border:1px solid #cccccc
+
+}
 .submit-buttons{
     background-color:#3d348B;
     color:white;
     padding: 15px 32px;
+    border-radius:80px;
+    font-size: 16px;
+    border:none;
+    margin:10px;
+
+}
+.addfriendsbutton{
+    background-color:#3d348B;
+    color:white;
+    padding: 10px 26px;
     border-radius:80px;
     font-size: 16px;
     border:none;
